@@ -1,0 +1,21 @@
+h1{
+    font-family: cursive;
+}
+body{
+    background-color: rgb(174, 241, 241);
+}
+.itembox{
+    
+}
+.indi{
+    height:70px;
+    width:400px;
+    border-radius:10px;
+    border-style: dashed;
+    border-color: white;
+    border-width: 2px;
+    background-color: rgb(13, 192, 192);
+}
+.single{
+    margin: 10px 0px;
+}

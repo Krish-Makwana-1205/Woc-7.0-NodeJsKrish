@@ -13,11 +13,15 @@ async function putEmail(req, res){
         email_id: body.emailid,
         authority_name: body.authorityname
     });
-    return res.json({
-        success: true
-    });
+    return res.redirect('/email');
 }
-
+async function allEmail(req, res){
+    const list = await email.find({});
+    res.render('showall',{
+        items:list,
+    })
+}
 module.exports ={
     putEmail,
+    allEmail
 }

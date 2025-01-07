@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/showall.css">
+</head>
+
+<body>
+    <h1>All Emails</h1>
+    <div class="itembox">
+        <% for (let i=0; i < items.length; i++) { %>
+            <div class="indi">
+                <div class="single">
+                    Email :- <%= items[i].email_id %>
+                </div>
+                <div class="single">
+                    Authority :- <%= items[i].authority_name %>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</body>
+
+</html>
