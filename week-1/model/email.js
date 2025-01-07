@@ -6,9 +6,9 @@ const emailschema = new mongoose.Schema({
         unique: true,
         type: String
     },
-    authorityname:{
-        required: true,
-        type: String
+    authority_name:{
+        type: String,
+        required: true
     }
 })
 
