@@ -21,7 +21,12 @@ async function allEmail(req, res){
         items:list,
     })
 }
+async function deleteEmail(req, res){
+    await email.deleteOne({email_id:req.body.emailid});
+    res.redirect('/email');
+}
 module.exports ={
     putEmail,
-    allEmail
+    allEmail,
+    deleteEmail
 }

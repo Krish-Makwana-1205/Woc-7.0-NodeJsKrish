@@ -1,5 +1,5 @@
 const express = require('express');
-const {putEmail, allEmail} = require('../controller/CRUD');
+const {putEmail, allEmail, deleteEmail} = require('../controller/CRUD');
 const router = express.Router();
 
 router.get('/', (req, res)=>{
@@ -7,5 +7,5 @@ router.get('/', (req, res)=>{
 })
 router.get('/email',allEmail);
 router.post('/',putEmail);
-
+router.post('/delete', deleteEmail)
 module.exports = router;

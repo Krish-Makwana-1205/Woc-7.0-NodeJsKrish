@@ -20,7 +20,16 @@
                     Authority :- <%= items[i].authority_name %>
                 </div>
             </div>
-        <% } %>
+            <% } %>
+    </div>
+    <div class="indi" id = "del">
+        <div>
+            <form action="/delete" method="POST">
+                <label>Email Id</label>
+                <input name="emailid" type="text" id="emailfield" />
+                <button type="submit">Delete</button>
+            </form>
+        </div>
     </div>
 </body>
 
