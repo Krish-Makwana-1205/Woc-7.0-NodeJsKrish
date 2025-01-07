@@ -1,21 +1,23 @@
 h1{
     font-family: cursive;
+    /* margin :0px 50px 0px 0px; */
+    margin-left: 60px;
 }
 body{
     background-color: rgb(174, 241, 241);
 }
-.itembox{
-    
-}
 .indi{
-    height:70px;
+    height:100px;
     width:400px;
     border-radius:10px;
     border-style: dashed;
     border-color: white;
     border-width: 2px;
     background-color: rgb(13, 192, 192);
+    font-family: cursive;
+    font-size: large;
+    margin-bottom: 30px;
 }
 .single{
-    margin: 10px 0px;
+    margin: 10px 10px;
 }
