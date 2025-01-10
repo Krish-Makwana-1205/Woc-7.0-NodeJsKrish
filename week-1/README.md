@@ -4,9 +4,8 @@ This is the Week-1 checkpoint task for Node js where email id's are stored and c
 
 ## Features
 
-- The '/' page is used for posting or creating more email ids
-- The '/email' page is used for viewing all the emails
-- The delete feature is present on the email page itself.
+- The '/email' page is used for viewing all the emails, adding and deleting them.
+
 
 ## Installation
 
