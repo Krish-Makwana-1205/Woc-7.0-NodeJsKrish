@@ -7,8 +7,6 @@ async function putEmail(req, res){
             success:false
         })
     }
-    console.log(body.authorityname);
-    console.log("debug");
     await email.create({
         email_id: body.emailid,
         authority_name: body.authorityname

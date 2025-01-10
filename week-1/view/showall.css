@@ -9,6 +9,8 @@ body{
     font-size: large;
 }
 .indi{
+    display: flex;
+    align-items: center;
     height:100px;
     width:400px;
     border-radius:10px;
@@ -61,8 +63,8 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20vw;
-    height: 40vh;
+    width: 240px;
+    height: 300px;
     border-radius: 10px;
     border-color: aliceblue;
     border-style: dashed;
@@ -75,4 +77,16 @@ input{
     display: flex;
     justify-content: center;
     margin:0px;
+}
+#all-cont{
+    margin-left: 20px;
+}
+.X{
+    width:50px;
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.347);
+    margin-left:30px;
+}
+.X:hover{
+    background-color: rgba(255, 0, 0, 0.669);
 }

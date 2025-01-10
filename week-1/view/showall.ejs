@@ -11,17 +11,20 @@
 <body>
     <div id="outflex">
         <!-- <div></div> -->
-        <div>
+        <div id="all-cont">
             <h1>All Emails</h1>
             <div class="itembox">
                 <% for (let i=0; i < items.length; i++) { %>
                     <div class="indi">
-                        <div class="single">
-                            Email :- <%= items[i].email_id %>
+                        <div>
+                            <div class="single">
+                                Email :-<%= items[i].email_id %>
+                            </div>
+                            <div class="single">
+                                Authority :-<%= items[i].authority_name %>
+                            </div>
                         </div>
-                        <div class="single">
-                            Authority :- <%= items[i].authority_name %>
-                        </div>
+                        <button onclick="delebutton(event)" class="X">X</button>
                     </div>
                     <% } %>
             </div>
@@ -30,14 +33,14 @@
                     <form action="/delete" method="POST">
                         <label>Email Id</label>
                         <input name="emailid" type="text" id="emailfield" />
-                        <button type="submit">Delete</button>
+                        <button type="submit" id = "dltbtn">Delete</button>
                     </form>
                 </div>
             </div>
         </div>
-        
+
         <div id="box">
-            
+
             <div id="inner">
                 <form method="POST" action="/">
                     <div class="perso">
@@ -56,9 +59,11 @@
                 </form>
             </div>
         </div>
-        <div></div><div></div><div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
-
+    <script src="/static/showall.js"></script>
 </body>
 
 </html>
