@@ -5,6 +5,8 @@ h1{
 }
 body{
     background-color: rgb(174, 241, 241);
+    font-family: cursive;
+    font-size: large;
 }
 .indi{
     height:100px;
@@ -42,4 +44,35 @@ button:hover{
 input{
     height: 20px;
     
+}
+#outflex{
+    display:flex;
+    justify-content: space-between;;
+}
+#box{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99vh; */
+    margin-top: 95px;
+
+}
+#inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 40vh;
+    border-radius: 10px;
+    border-color: aliceblue;
+    border-style: dashed;
+    background-color: rgb(13, 192, 192);
+}
+input{
+    margin: 0vh 0vw 5vh 0vw;
+}
+.perso{
+    display: flex;
+    justify-content: center;
+    margin:0px;
 }
