@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/showall.css">
+</head>
+
+<body>
+    <div id="outflex">
+        <!-- <div></div> -->
+        <div id="all-cont">
+            <h1>All Emails</h1>
+            <div class="itembox">
+                <% for (let i=0; i < items.length; i++) { %>
+                    <div class="indi">
+                        <div class="comptxt">
+                            <div class="single">
+                                Email :-<%= items[i].email_id %>
+                            </div>
+                            <div class="single">
+                                Authority :-<%= items[i].authority_name %>
+                            </div>
+                        </div>
+                        <button onclick="delebutton(event)" class="X">X</button>
+                    </div>
+                    <% } %>
+            </div>
+            <div class="indi" id="del">
+                <div>
+                    <form action="/email/delete" method="POST">
+                        <label>Email Id</label>
+                        <input name="emailid" type="text" id="emailfield" />
+                        <button type="submit" id = "dltbtn">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="box">
+
+            <div id="inner">
+                <form method="POST" action="/email">
+                    <div class="perso">
+                        <label>emailid</label>
+                    </div>
+                    <input type="text" name="emailid" placeholder="example@daiict.ac.in" />
+                    <br>
+                    <div class="perso">
+                        <label>authorityname</label>
+                    </div>
+                    <input type="text" name="authorityname" />
+                    <br>
+                    <div class="perso">
+                        <button type="submit">Generate</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script src="/static/showall.js"></script>
+</body>
+
+</html>

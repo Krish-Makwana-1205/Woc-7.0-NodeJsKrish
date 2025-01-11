@@ -1,0 +1,95 @@
+h1{
+    font-family: cursive;
+    /* margin :0px 50px 0px 0px; */
+    margin-left: 60px;
+}
+body{
+    background-color: rgb(174, 241, 241);
+    font-family: cursive;
+    font-size: large;
+}
+.indi{
+    display: flex;
+    align-items: center;
+    height:100px;
+    width:400px;
+    border-radius:10px;
+    border-style: dashed;
+    border-color: white;
+    border-width: 2px;
+    background-color: rgb(13, 192, 192);
+    font-family: cursive;
+    font-size: large;
+    margin-bottom: 30px;
+}
+.single{
+    margin: 10px 10px;
+} 
+h3{
+    margin-left: 100px;
+}
+button{
+    border-radius: 10px;
+    height:40px;
+    width:100px;
+    font:inherit;
+    background-color: rgb(65, 234, 197);
+}
+button:hover{
+    background-color: rgb(62, 243, 155);
+}
+#del{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    height: 20px;
+    
+}
+#outflex{
+    display:flex;
+    justify-content: space-between;;
+}
+#box{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99vh; */
+    margin-top: 95px;
+
+}
+#inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 300px;
+    border-radius: 10px;
+    border-color: aliceblue;
+    border-style: dashed;
+    background-color: rgb(13, 192, 192);
+}
+input{
+    margin: 0vh 0vw 5vh 0vw;
+}
+.perso{
+    display: flex;
+    justify-content: center;
+    margin:0px;
+}
+#all-cont{
+    margin-left: 20px;
+}
+.X{
+    width:50px;
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.347);
+    margin-left:30px;
+}
+.X:hover{
+    background-color: rgba(255, 0, 0, 0.669);
+}
+.comptxt{
+    width:300px;
+}
