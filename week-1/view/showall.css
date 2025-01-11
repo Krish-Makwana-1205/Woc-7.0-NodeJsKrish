@@ -90,3 +90,6 @@ input{
 .X:hover{
     background-color: rgba(255, 0, 0, 0.669);
 }
+.comptxt{
+    width:300px;
+}
