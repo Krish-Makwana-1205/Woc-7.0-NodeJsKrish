@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <div><%= question.text %></div>
+    <div id="content">
+        <% for(let i=0; i < messages.length; ++i){ %>
+            <p>
+                <%=messages[i].text%>
+            </p>
+        <% } %>
+    </div>
+    <form action="/send/<%=question._id%>" method="POST" id="send">
+        <label>message</label>
+        <input name="textfield" type="text" id="ip" />
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const socket = io();
+        const questionId = '<%= question._id %>';
+        socket.emit('join-room', questionId);
+        socket.on('message', (newMessage) => {
+            const messageDiv = document.getElementById('content');
+            const newMessageElement = document.createElement('p');
+            newMessageElement.textContent = newMessage.text;
+            messageDiv.appendChild(newMessageElement);
+        });
+    </script>
+</body>
+
+</html>

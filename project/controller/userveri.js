@@ -24,19 +24,12 @@ async function makeUser(req, res) {
 async function loginUser(req, res){
     const body = req.body;
     if((!body.id) || (!body.password)){
-        console.log("run");
         return res.redirect('/user/login');
     }
     const User = await user.findOne({id:body.id, password:body.password});
-    console.log(User);
     if(!User){
         return res.redirect('/user/login');
     }
-    console.log(body.password);
-    // if(User.password != body.password){
-    //     console.log('bun');
-    //     return res.redirect('/user/login');
-    // }
     const token = setUser(User);
     res.cookie('uid', token);
     return res.redirect('/home');
