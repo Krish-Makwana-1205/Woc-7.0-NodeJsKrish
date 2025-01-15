@@ -16,6 +16,7 @@ async function allEmail(req, res) {
     const list = await email.find({});
     res.render('showall', {
         items: list,
+        user: req.user
     })
 }
 async function deleteEmail(req, res) {

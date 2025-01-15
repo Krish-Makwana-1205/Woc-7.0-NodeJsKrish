@@ -10,7 +10,8 @@ function initialServer(){
 async function askQuestion(req, res) {
     const list = await question.find({}).sort({ createdAt: 1 });
     return res.render('ask-question', {
-        list: list
+        list: list,
+        user: req.user,
     })
 }
 

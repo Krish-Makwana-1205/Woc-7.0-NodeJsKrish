@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/static/showall.css">
+    
 </head>
 
 <body>
+    <div id = "nav">
+        <div id = "greet" class = "navitems">Hello, <%= user.name %> !</div>
+        <button id = "logout" class = "navitems"> Log out</button>
+        <div class = "dandi" id = "first"></div>
+        <div id = "email"> Emails </div>
+        <div class = "dandi"></div>
+        <div class= "pages" id = "faq"> FAQ </div>
+        <div class = "dandi"></div>
+    </div>
     <div id="outflex">
-        <!-- <div></div> -->
         <div id="all-cont">
             <h1>All Emails</h1>
             <div class="itembox">
@@ -63,7 +72,9 @@
         <div></div>
         <div></div>
     </div>
-    <script src="/static/showall.js"></script>
+    <script src="/static/showall.js">
+    </script>
+    
 </body>
 
 </html>
