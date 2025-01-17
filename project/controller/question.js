@@ -2,13 +2,13 @@ const question = require('../model/question');
 const message = require('../model/message');
 const sock = require('socket.io');
 const http = require('http');
-
-function initialServer(){
-    
-}
+const day = require('dayjs');
 
 async function askQuestion(req, res) {
-    const list = await question.find({}).sort({ createdAt: 1 });
+    let list = await question.find({}).sort({ createdAt: 1 });
+    for(let i = 0; i < list.length; ++i){
+        list[i].shorten = day(list[i].createdAt).format('DD/MM/YYYY');
+    }
     return res.render('ask-question', {
         list: list,
         user: req.user,
@@ -25,7 +25,7 @@ async function postQuestion(req, res) {
         })
         return res.redirect('/askQuestion');
     } catch (error) {
-        return res.redirect('./askQuestion');
+        return res.redirect('/askQuestion');
     }
 }
 

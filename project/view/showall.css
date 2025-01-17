@@ -101,6 +101,8 @@ input{
     display: flex;
     align-items: center;
     justify-content: left;
+    width:100vw;
+    position:fixed;
 }
 .navitems{
     margin:0px 0px 0px 20px;
@@ -130,4 +132,7 @@ input{
     height:inherit;
     padding: 0px 80px;
     align-content: center;
+}
+.itembox{
+    margin-top: 100px;
 }

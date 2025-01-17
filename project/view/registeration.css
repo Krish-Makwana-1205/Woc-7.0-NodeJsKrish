@@ -1,0 +1,15 @@
+body{
+    font-family: cursive;
+    font-size: large;
+    background-color: rgb(174, 241, 241);
+}
+button{
+    border-radius: 10px;
+    height:40px;
+    width:100px;
+    font:inherit;
+    background-color: rgb(65, 234, 197);
+}
+button:hover{
+    background-color: rgb(62, 243, 155);
+}

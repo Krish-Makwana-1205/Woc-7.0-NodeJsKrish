@@ -1,5 +1,7 @@
 #nav{
     height:50px;
+    width:100vw;
+    position:fixed;
     background-color: rgb(13, 192, 192);
     margin:0px;
     padding:0px;
@@ -48,7 +50,63 @@ button:hover{
 }
 body{
     font-family: cursive;
+    font-size: large;
+    background-color: rgb(174, 241, 241);
 }
 #faq{
     background-color: rgb(50, 239, 239);
+}
+#wrap{
+    padding-top:60px;
+    width:70vw;
+}
+h3{
+    text-align: center;
+}
+.block{
+    background-color:  rgb(13, 192, 192);
+    margin: 30px 0px;
+    height:100px;
+}
+.items{
+    font-size: larger;
+    font-weight: 300;
+    padding: 15px 0px;
+}
+.dets{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Times New Roman', Times, serif;
+}
+a{
+    color: black;
+    text-decoration: none;
+    background-color: rgb(65, 234, 197);
+    padding: 10px;
+}
+#ask{
+    padding-top:60px;
+    width: 20vw;
+    position: fixed;
+    left:80vw;
+}
+#page{
+    display: flex;
+    justify-content: space-between;
+}
+#questionText{
+    /* margin-left: 5vw; */
+}
+#sub{
+    margin-left: 5vw;
+}
+#qhead{
+    text-align: left;
+    margin-left: 2.5vw;
+}
+textarea{
+    border-radius: 2px;
+    border-width: 2px;
+    background-color: aqua;
+    font-family: cursive;
 }

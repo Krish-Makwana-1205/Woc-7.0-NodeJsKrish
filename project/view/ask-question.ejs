@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href = "/static/ask-question.css"/>
+    <link rel="stylesheet" href="/static/ask-question.css" />
 </head>
+
 <body>
-    <div id = "nav">
-        <div id = "greet" class = "navitems">Hello, <%= user.name %> !</div>
-        <button id = "logout" class = "navitems"> Log out</button>
-        <div class = "dandi" id = "first"></div>
-        <div id = "email"> Emails </div>
-        <div class = "dandi"></div>
-        <div class= "pages" id = "faq"> FAQ </div>
-        <div class = "dandi"></div>
+    <div id="nav">
+        <div id="greet" class="navitems">Hello, <%= user.name %> !</div>
+        <button id="logout" class="navitems"> Log out</button>
+        <div class="dandi" id="first"></div>
+        <div id="email"> Emails </div>
+        <div class="dandi"></div>
+        <div class="pages" id="faq"> FAQ </div>
+        <div class="dandi"></div>
     </div>
-    <%for(let i = 0; i < list.length; ++i){%>
-       <li><%= list[i].text%>
-        <br>
-        <a href = "/askQuestion/<%= list[i]._id %>">go to chat</a>
-       </li>
-    <%}%>
-    <form action="/askQuestion" method="POST">
-        <label for="questionText">Question:</label>
-        <textarea name="questionText" id="questionText" rows="4" required></textarea><br>
-        <button type="submit">Submit</button>
-    </form>
+    <div id="page">
+        <div id="wrap">
+            <h3>FAQ's</h3>
+            <%for(let i=0; i < list.length; ++i){%>
+                <div class="block">
+                    <div class="items">
+                        <%= list[i].text%>
+                    </div>
+                    <div class="dets">
+                        <span>Asked by :- <%=list[i].name%></span>
+                        <span>Asked on :- <%=list[i].shorten%></span>
+                        <span>
+                            <a href="/askQuestion/<%= list[i]._id %>">go to chat</a>
+                        </span>
+                    </div>
+                </div>
+                <%}%>
+        </div>
+        <div id="ask">
+            <h3 id = "qhead">Ask a question</h3>
+            <form action="/askQuestion" method="POST">
+                <!-- <label for="questionText"></label> -->
+                <textarea name="questionText" id="questionText" rows="8" cols="30" required></textarea><br>
+                <button type="submit" id = "sub">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="/static/ask-question.js"></script>
 </body>
+
 </html>

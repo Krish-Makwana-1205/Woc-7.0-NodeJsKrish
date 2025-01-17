@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/static/login.css" />
 </head>
+
 <body>
-    <form action="/user/login" method="POST">
-        <label>ID</label>
-        <input type = "text" name = "id"/>
-        <label>Password</label>
-        <input type = "text" name = "password"/>  
-        <button type = "submit">login</button>
-    </form>
+    <div class="cover">
+        <div class="box">
+            <div id="inner">
+                <form action="/user/login" method="POST">
+                    <label>ID</label>
+                    <br>
+                    <input type="text" name="id" id ="ipi" required/>
+                    <label>Password</label>
+                    <br>
+                    <input type="text" name="password" id = "ipp" required/>
+                    <button type="submit" id = "log">login</button>
+                    <a href="/user/registeration">Register here</a>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

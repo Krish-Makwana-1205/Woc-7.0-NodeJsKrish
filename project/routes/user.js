@@ -3,8 +3,8 @@ const {makeUser, loginUser} = require('../controller/userveri');
 
 const router = express.Router();
 
-router.post('/registration', makeUser);
-router.get('/registration',(req, res)=>{
+router.post('/registeration', makeUser);
+router.get('/registeration',(req, res)=>{
     return res.render('register');
 })
 router.get('/login',(req, res)=>{
