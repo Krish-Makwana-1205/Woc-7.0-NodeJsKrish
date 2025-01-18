@@ -40,6 +40,7 @@ async function fetchMessage(req, res) {
         return res.render('chat', {
             question: ques,
             messages: mes,
+            user:req.user
         })
     }catch(error){
         return res.status(500);

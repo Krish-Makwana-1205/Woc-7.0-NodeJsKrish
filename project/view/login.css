@@ -46,3 +46,9 @@ button:hover{
 a{
     margin-left: 35px;
 }
+input{
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border-width: 3px;
+    background-color: rgb(196, 243, 243);
+}

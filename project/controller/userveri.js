@@ -18,7 +18,7 @@ async function makeUser(req, res) {
     }
     const token = setUser(using);
     res.cookie('uid', token);
-    return res.redirect('/home');
+    return res.redirect('/askQuestion');
 }
 
 async function loginUser(req, res){
@@ -32,7 +32,7 @@ async function loginUser(req, res){
     }
     const token = setUser(User);
     res.cookie('uid', token);
-    return res.redirect('/home');
+    return res.redirect('/askQuestion');
 }
 
 module.exports = {

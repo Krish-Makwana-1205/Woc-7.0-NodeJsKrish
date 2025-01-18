@@ -1,0 +1,91 @@
+#nav{
+    height:50px;
+    width:100vw;
+    position:fixed;
+    background-color: rgb(13, 192, 192);
+    margin:0px;
+    padding:0px;
+    display: flex;
+    align-items: center;
+    justify-content: left;  
+}
+.navitems{
+    margin:0px 0px 0px 20px;
+}
+#logout:hover{
+    background-color: rgba(245, 147, 72, 0.669);
+}
+#email{
+    height: inherit;
+    
+    align-content: center;
+    padding: 0px 80px;
+}
+#dltbtn:hover{
+    background-color: rgba(245, 147, 72, 0.669);
+}
+.dandi{
+    height:inherit;
+    width:2px;
+    background-color: white;
+}
+
+#first{
+    margin-left: 200px;
+}
+.pages{
+    height:inherit;
+    padding: 0px 80px;
+    align-content: center;
+}
+button{
+    border-radius: 10px;
+    height:40px;
+    width:100px;
+    font:inherit;
+    background-color: rgb(65, 234, 197);
+}
+button:hover{
+    background-color: rgb(62, 243, 155);
+}
+body{
+    font-family: cursive;
+    font-size: large;
+    background-color: rgb(174, 241, 241);
+}
+#qt{
+    padding-top: 100px;
+    
+}
+#head{
+    font-size: x-large;
+    font-weight: 600;
+}
+#cover{
+    display:flex;
+    justify-content: space-between;
+}
+#who{
+    font-size:medium;
+}
+.odd{
+    background-color: rgb(115, 237, 237);
+    width:inherit;
+    align-items: center;
+}
+.even{
+    width:inherit;
+    align-items: center;
+    background-color: rgb(53, 239, 239);
+}
+#content{
+    width:100vw;
+}
+#send{
+    position:fixed;
+    left:50vw;
+    top:100px;
+}
+.name{
+    font-size: small;
+}
