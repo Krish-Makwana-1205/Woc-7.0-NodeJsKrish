@@ -1,9 +1,17 @@
 const question = require('../model/question');
 const message = require('../model/message');
-const sock = require('socket.io');
-const http = require('http');
 const day = require('dayjs');
 
+async function adminquestion(req, res){
+    let list = await question.find({}).sort({ createdAt: 1 });
+    for(let i = 0; i < list.length; ++i){
+        list[i].shorten = day(list[i].createdAt).format('DD/MM/YYYY');
+    }
+    return res.render('ask-question', {
+        list: list,
+        user: req.user,
+    })
+} 
 async function askQuestion(req, res) {
     let list = await question.find({}).sort({ createdAt: 1 });
     for(let i = 0; i < list.length; ++i){
@@ -73,5 +81,6 @@ module.exports = {
     askQuestion,
     postQuestion,
     fetchMessage,
-    postMessage
+    postMessage,
+    adminquestion
 }

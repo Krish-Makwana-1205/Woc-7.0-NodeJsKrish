@@ -67,11 +67,14 @@ h3{
     background-color:  rgb(13, 192, 192);
     margin: 30px 0px;
     height:100px;
+
 }
 .items{
     font-size: larger;
     font-weight: 300;
     padding: 15px 0px;
+    display: flex;
+    justify-content: space-between;
 }
 .dets{
     display: flex;
@@ -109,4 +112,8 @@ textarea{
     border-width: 2px;
     background-color: aqua;
     font-family: cursive;
+}
+.cross{
+    width:40px;
+    margin-right: 2.5vw;
 }

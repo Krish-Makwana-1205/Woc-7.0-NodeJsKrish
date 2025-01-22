@@ -25,6 +25,9 @@
                 <div class="block">
                     <div class="items">
                         <%= list[i].text%>
+                        <%if(user.id == 'admin'){%>
+                            <button class="cross">X</button>
+                        <%}%>
                     </div>
                     <div class="dets">
                         <span>Asked by :- <%=list[i].name%></span>
