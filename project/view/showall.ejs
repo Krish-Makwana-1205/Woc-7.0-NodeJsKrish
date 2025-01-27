@@ -32,10 +32,13 @@
                                 Authority :-<%= items[i].authority_name %>
                             </div>
                         </div>
-                        <button onclick="delebutton(event)" class="X">X</button>
+                        <%if(user.name == 'admin'){%>
+                              <button onclick="delebutton(event)" class="X">X</button>
+                        <%}%>      
                     </div>
                     <% } %>
             </div>
+            <% if(user.name == 'admin'){%>
             <div class="indi" id="del">
                 <div>
                     <form action="/email/delete" method="POST">
@@ -45,8 +48,9 @@
                     </form>
                 </div>
             </div>
+            <%}%>
         </div>
-
+        <% if(user.name == 'admin'){%>
         <div id="box">
 
             <div id="inner">
@@ -67,6 +71,7 @@
                 </form>
             </div>
         </div>
+        <%}%>
         <div></div>
         <div></div>
         <div></div>

@@ -24,7 +24,14 @@ async function askQuestion(req, res) {
 }
 
 async function postQuestion(req, res) {
+    
     try {
+        if(req.body.option == "delete"){
+            const body = req.body;
+            const temp = await question.deleteOne({text:body.questionText});
+            console.log(temp);
+            return res.redirect('/askQuestion');
+        }
         const body = req.body;
         const Que = await question.create({
             text: body.questionText,
@@ -77,10 +84,11 @@ async function postMessage(req, res){
 }
 
 
+
 module.exports = {
     askQuestion,
     postQuestion,
     fetchMessage,
     postMessage,
-    adminquestion
+    adminquestion,
 }

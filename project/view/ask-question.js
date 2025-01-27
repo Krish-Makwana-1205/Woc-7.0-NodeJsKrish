@@ -11,3 +11,7 @@ function Logout(){
     document.cookie = "uid=;";
     location.reload();
 }
+
+function deletebtn(event){
+    
+}

@@ -87,7 +87,7 @@ a{
     background-color: rgb(65, 234, 197);
     padding: 10px;
 }
-#ask{
+.ask{
     padding-top:60px;
     width: 20vw;
     position: fixed;
@@ -97,13 +97,10 @@ a{
     display: flex;
     justify-content: space-between;
 }
-#questionText{
-    /* margin-left: 5vw; */
-}
-#sub{
+.sub{
     margin-left: 5vw;
 }
-#qhead{
+.qhead{
     text-align: left;
     margin-left: 2.5vw;
 }
@@ -116,4 +113,13 @@ textarea{
 .cross{
     width:40px;
     margin-right: 2.5vw;
+}
+#delete{
+    position: fixed;
+    width: 20vw;
+    left:80vw;
+    top: 40vh;
+}
+.rad{
+    background-color: rgb(13, 192, 192);
 }

@@ -25,9 +25,9 @@
                 <div class="block">
                     <div class="items">
                         <%= list[i].text%>
-                        <%if(user.id == 'admin'){%>
-                            <button class="cross">X</button>
-                        <%}%>
+                            <!-- <%if(user.name=='admin' ){%>
+                                <button class="cross" onclick = "deletebtn(event)">X</button>
+                                <%}%> -->
                     </div>
                     <div class="dets">
                         <span>Asked by :- <%=list[i].name%></span>
@@ -39,14 +39,26 @@
                 </div>
                 <%}%>
         </div>
-        <div id="ask">
-            <h3 id = "qhead">Ask a question</h3>
-            <form action="/askQuestion" method="POST">
-                <!-- <label for="questionText"></label> -->
-                <textarea name="questionText" id="questionText" rows="8" cols="30" required></textarea><br>
-                <button type="submit" id = "sub">Submit</button>
-            </form>
-        </div>
+        <%if(user.name=='admin' ){%>
+            <div class="ask">
+                <h3 class="qhead">Ask a question</h3>
+                <form action="/askQuestion" method="POST">
+                    <!-- <label for="questionText"></label> -->
+                    <textarea name="questionText" class="questionText" rows="8" cols="30" required></textarea><br>
+                    <span class="rad">
+                        <label for="creater">create</label>
+                        <input type="radio" name="option" id="creater" value="create" required /><br>
+                    </span>
+                    <span class="rad">
+                        <label for="deleter">delete</label>
+                        <input type="radio" name="option" id="deleter" value="delete" required />
+                    </span>
+                    <button type="submit" class="sub">Submit</button>
+                </form>
+            </div>
+
+            <%}%>
+
     </div>
     <script src="/static/ask-question.js"></script>
 </body>

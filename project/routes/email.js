@@ -10,5 +10,6 @@ const {restrictToLoggedinUserOnly} = require('../middleware/logincheck');
 // })
 router.get('/', restrictToLoggedinUserOnly, allEmail);
 router.post('/',putEmail);
-router.post('/delete', deleteEmail)
+router.post('/delete', deleteEmail);
+
 module.exports = router;

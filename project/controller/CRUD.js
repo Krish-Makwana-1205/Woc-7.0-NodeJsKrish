@@ -2,6 +2,9 @@ const email = require('../model/email');
 
 async function putEmail(req, res) {
     const body = req.body;
+    if(req.user.name != 'admin'){
+        return null;
+    }
     try {
         await email.create({
             email_id: body.emailid,
@@ -20,6 +23,9 @@ async function allEmail(req, res) {
     })
 }
 async function deleteEmail(req, res) {
+    if(req.user.name != 'admin'){
+        return null;
+    }
     await email.deleteOne({ email_id: req.body.emailid });
     res.redirect('/email');
 }
