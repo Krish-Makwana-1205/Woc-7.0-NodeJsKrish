@@ -23,3 +23,9 @@ function faqrelocate(){
     window.location.href = "http://localhost:8002/askQuestion";
 }
 
+const Resourcenav = document.getElementById('resource');
+Resourcenav.addEventListener('click', resourcerelocate);
+
+function resourcerelocate(){
+    window.location.href = "http://localhost:8002/resource";
+}

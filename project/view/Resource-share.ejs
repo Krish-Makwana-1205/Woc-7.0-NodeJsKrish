@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="/static/Resource-share.css"/>
+</head>
+<body>
+    <div id="nav">
+        <div id="greet" class="navitems">Hello, <%= user.name %> !</div>
+        <button id="logout" class="navitems"> Log out</button>
+        <div class="dandi" id="first"></div>
+        <div id="email"> Emails </div>
+        <div class="dandi"></div>
+        <div class="pages" id="faq"> FAQ </div>
+        <div class="dandi"></div>
+        <div class="pages" id="resource">Resource</div>
+        <div class="dandi"></div>
+        <div class="pages" id="lost">Lost & Found</div>
+        <div class="dandi"></div>
+    </div>
+    <div id="bufe"></div>
+    <div id = "cover" >
+        <div class="lform" >
+            <div class="getdoc">
+                <form action="/resource" method="GET">
+                    <label for="sub" class="lsub">subject</label>
+                    <input class="sub" name="sub">
+                    <button type="submit" id="get">Get</button>
+                </form>
+            </div>
+        </div>
+        <div class="lform" >
+            <div class="getdoc">
+                <form action="/giveresource" method="POST"enctype="multipart/form-data">
+                    
+                    <br>
+                    <label for="sub" class="lsub" required>subject</label>
+                    <input class="sub" name="sub">
+                    <input type="file" name="file" id ="file">
+                    <button type="submit" id="put">Upload</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <%console.log('hey')%>
+    <%if(list){%>
+        <%console.log(list)%>
+        <%for(let i = 0; i < list.length; ++i){%>
+            <a href = '<%= list[i] %>'><%=list[i]%></a>
+            <br>
+        <%}%>
+    <%}%>
+    <script src = "/static/Resource-share.js"></script>
+</body>
+</html>

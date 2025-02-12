@@ -1,0 +1,102 @@
+#nav{
+    height:50px;
+    width:100vw;
+    position:fixed;
+    background-color: rgb(13, 192, 192);
+    margin:0px;
+    padding:0px;
+    display: flex;
+    align-items: center;
+    justify-content: left;  
+}
+.navitems{
+    margin:0px 0px 0px 20px;
+}
+#logout:hover{
+    background-color: rgba(245, 147, 72, 0.669);
+}
+#email{
+    height: inherit;
+    
+    align-content: center;
+    padding: 0px 80px;
+}
+#dltbtn:hover{
+    background-color: rgba(245, 147, 72, 0.669);
+}
+.dandi{
+    height:inherit;
+    width:2px;
+    background-color: white;
+}
+
+#first{
+    margin-left: 200px;
+}
+.pages{
+    height:inherit;
+    padding: 0px 80px;
+    align-content: center;
+}
+button{
+    border-radius: 10px;
+    height:40px;
+    width:100px;
+    font:inherit;
+    background-color: rgb(65, 234, 197);
+}
+button:hover{
+    background-color: rgb(62, 243, 155);
+}
+body{
+    font-family: cursive;
+    font-size: large;
+    background-color: rgb(174, 241, 241);
+}
+#resource{
+    background-color: rgb(50, 239, 239);
+}
+#cover{
+    margin-top: 10px;
+    height:300px;
+    width:100vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+.lform{
+    width: 20vw;
+    height: 300px;
+    background-color: rgb(13, 192, 192);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#bufe{
+    padding-top: 100px;
+}
+.getdoc{
+    width:15vw;
+    height:300px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#get{
+    margin-left: 17px;
+    margin-top: 20px;
+}
+.lsub{
+    display: block;
+    margin-top: 20px;
+}
+.subtype{
+    margin-bottom: 20px;
+}
+#file{
+    margin-top:20px;
+}
+#put{
+    margin-left: 30px;
+    margin-top: 20px;
+}
