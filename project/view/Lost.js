@@ -12,6 +12,13 @@ function resourcerelocate(){
     window.location.href = "http://localhost:8002/resource";
 }
 
+const faq = document.getElementById('faq');
+faq.addEventListener('click', faqrelocate);
+
+function faqrelocate(){
+    window.location.href = "http://localhost:8002/askQuestion";
+}
+
 const logoutbtn = document.getElementById('logout');
 logoutbtn.addEventListener('click', Logout);
 function Logout(){
@@ -19,13 +26,3 @@ function Logout(){
     location.reload();
 }
 
-function deletebtn(event){
-    
-}
-
-const lost = document.getElementById('lost');
-lost.addEventListener('click', lostrelocate);
-
-function lostrelocate(){
-    window.location.href = "http://localhost:8002/lostnfound";
-}

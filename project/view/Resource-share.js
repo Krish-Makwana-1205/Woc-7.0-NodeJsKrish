@@ -15,3 +15,9 @@ function Logout(){
 function faqrelocate(){
     window.location.href = "http://localhost:8002/askQuestion";
 }
+const lost = document.getElementById('lost');
+lost.addEventListener('click', lostrelocate);
+
+function lostrelocate(){
+    window.location.href = "http://localhost:8002/lostnfound";
+}

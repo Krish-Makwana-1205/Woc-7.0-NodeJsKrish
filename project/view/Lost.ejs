@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/Lost.css" />
+</head>
+
+<body>
+    <div id="nav">
+        <div id="greet" class="navitems">Hello, <%= user.name %> !</div>
+        <button id="logout" class="navitems"> Log out</button>
+        <div class="dandi" id="first"></div>
+        <div id="email"> Emails </div>
+        <div class="dandi"></div>
+        <div class="pages" id="faq"> FAQ </div>
+        <div class="dandi"></div>
+        <div class="pages" id="resource">Resource</div>
+        <div class="dandi"></div>
+        <div class="pages" id="lost">Lost & Found</div>
+        <div class="dandi"></div>
+    </div>
+    <div id="getreq">
+        <h4>Lost&Found search</h4>
+        <form action="/lostnfound" method="GET">
+            <span class="rad">
+                <label for="lost">Lost</label>
+                <input type="radio" name="option" id="lost" value="lost" required /><br>
+            </span>
+            <span class="found">
+                <label for="deleter">Found</label>
+                <input type="radio" name="option" id="found" value="found" required />
+            </span>
+            <br>
+            <label for="place">Choose an option:</label>
+            <select id="place" name="place" required>
+                <option value="CEP">CEP</option>
+                <option value="LT">LT</option>
+                <option value="Cafeteria">Cafeteria</option>
+            </select>
+            <button type = "submit" id = "gets">Submit</button>
+        </form>
+    </div>
+    <div id = "postitem">
+        <h3>Lost&Found post</h3>
+        <form action = "/lostnfound" method="POST" enctype="multipart/form-data">
+            <span class="rad">
+                <label for="lost">Lost</label>
+                <input type="radio" name="lnf" id="lostp" value="lost" required /><br>
+            </span>
+            <span class="found">
+                <label for="deleter">Found</label>
+                <input type="radio" name="lnf" id="foundp" value="found" required />
+            </span>
+            <br>
+            <label for="place">Choose an option:</label>
+            <select id="placep" name="place" required>
+                <option value="CEP">CEP</option>
+                <option value="LT">LT</option>
+                <option value="Cafeteria">Cafeteria</option>
+            </select>
+            <br>
+            <label for = "iname">Name</label>
+            <input name = "iname" id = "iname" required/>
+            <label for = "desc">Description</label>
+            <br>
+            <textarea name="desc" id = "desc" rows="4" cols="20" required></textarea> 
+            <br>
+            <label for = "file">Upload pic</label>
+            <input type="file" id = "file" name = "file"/>
+            <button type = "submit" id = "getsp">Submit</button>
+        </form>
+    </div>
+    <div id = "buf"></div>
+    <%if(list){%>
+        <%for(let i  = 0; i < list.length; ++i){%>
+            <div>
+                <h3><%=list[i].name%></h3>
+                <div>description :- <%=list[i].description%></div>
+                <div>user:- <%=list[i].lostuser%></div>
+                <a href=<%=list[i].imgurl%>>image link</a>
+            </div>
+            
+        <%}%>
+    <%}%>    
+    <script src="/static/Lost.js"></script>
+</body>
+
+</html>

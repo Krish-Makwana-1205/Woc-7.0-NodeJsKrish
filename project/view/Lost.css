@@ -1,0 +1,94 @@
+#nav{
+    height:50px;
+    width:100vw;
+    position:fixed;
+    background-color: rgb(13, 192, 192);
+    margin:0px;
+    padding:0px;
+    display: flex;
+    align-items: center;
+    justify-content: left;  
+}
+.navitems{
+    margin:0px 0px 0px 20px;
+}
+#logout:hover{
+    background-color: rgba(245, 147, 72, 0.669);
+}
+#email{
+    height: inherit;
+    
+    align-content: center;
+    padding: 0px 80px;
+}
+#dltbtn:hover{
+    background-color: rgba(245, 147, 72, 0.669);
+}
+.dandi{
+    height:inherit;
+    width:2px;
+    background-color: white;
+}
+
+#first{
+    margin-left: 200px;
+}
+.pages{
+    height:inherit;
+    padding: 0px 80px;
+    align-content: center;
+}
+button{
+    border-radius: 10px;
+    height:40px;
+    width:100px;
+    font:inherit;
+    background-color: rgb(65, 234, 197);
+}
+button:hover{
+    background-color: rgb(62, 243, 155);
+}
+body{
+    font-family: cursive;
+    font-size: large;
+    background-color: rgb(174, 241, 241);
+}
+#lost{
+    background-color: rgb(50, 239, 239);
+}
+
+#getreq{
+    height:240px;
+    width:170px;
+    position:fixed;
+    left:1300px;
+    top:100px;
+    background-color: rgb(13, 192, 192);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#gets{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+#postitem{
+    left: 1300px;
+    top: 370px;
+    position:fixed;
+    height:420px;
+    width:170px;
+    background-color: rgb(13, 192, 192);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#getsp{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+#buf{
+    padding-top: 60px;
+}

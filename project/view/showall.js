@@ -29,3 +29,10 @@ Resourcenav.addEventListener('click', resourcerelocate);
 function resourcerelocate(){
     window.location.href = "http://localhost:8002/resource";
 }
+
+const lost = document.getElementById('lost');
+lost.addEventListener('click', lostrelocate);
+
+function lostrelocate(){
+    window.location.href = "http://localhost:8002/lostnfound";
+}
