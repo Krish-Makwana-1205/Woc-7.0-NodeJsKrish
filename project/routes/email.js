@@ -1,15 +1,10 @@
 const express = require('express');
-const {putEmail, allEmail, deleteEmail} = require('../controller/CRUD');
+const {putEmail, allEmail, deleteEmail,chooseEmail} = require('../controller/email.js');
 const router = express.Router();
 const {restrictToLoggedinUserOnly} = require('../middleware/logincheck');
 
-// router.get('/', (req, res)=>{
-//     res.render('showall'.{
-//         items
-//     });
-// })
 router.get('/', restrictToLoggedinUserOnly, allEmail);
-router.post('/',putEmail);
-router.post('/delete', deleteEmail);
-
+router.post('/',restrictToLoggedinUserOnly,putEmail);
+router.post('/delete',restrictToLoggedinUserOnly, deleteEmail);
+router.get('/choose', restrictToLoggedinUserOnly,chooseEmail);
 module.exports = router;

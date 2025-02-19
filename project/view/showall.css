@@ -42,6 +42,7 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    height:200px;
 }
 input{
     height: 20px;
@@ -119,6 +120,9 @@ input{
 #dltbtn:hover{
     background-color: rgba(245, 147, 72, 0.669);
 }
+#dltbtn{
+    margin-left: 40px;
+}
 .dandi{
     height:inherit;
     width:2px;
@@ -135,4 +139,29 @@ input{
 }
 .itembox{
     margin-top: 100px;
+}
+
+#getform{
+    position:fixed;
+    left: 1000px;
+    top: 200px;
+    background-color: rgb(13, 192, 192);
+    padding:20px;
+    border-radius: 10px;
+}
+
+#catdiv{
+    margin-left: 50px;
+}
+
+#catgetdiv{
+    margin-left: 20px;
+}
+
+#bu{
+    padding:10px
+}
+
+#catdel{
+    margin-left: 50px;
 }

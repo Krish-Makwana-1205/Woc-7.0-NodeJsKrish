@@ -12,6 +12,15 @@ const emailschema = new mongoose.Schema({
     }
 })
 
+const categoryschema = new mongoose.Schema({
+    department:{
+        type: String,
+        required: true,
+    },
+    list:[emailschema],
+});
+
+const category = mongoose.model('email_cat', categoryschema);
 const email = mongoose.model('email', emailschema);
 
-module.exports = email;
+module.exports = category;

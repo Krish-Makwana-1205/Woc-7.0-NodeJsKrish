@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/static/showall.css">
-    
+
 </head>
 
 <body>
@@ -36,53 +36,82 @@
                                 Authority :-<%= items[i].authority_name %>
                             </div>
                         </div>
-                        <%if(user.name == 'admin'){%>
-                              <button onclick="delebutton(event)" class="X">X</button>
-                        <%}%>      
+                        <!-- <%if(user.name=='admin' ){%>
+                            <button onclick="delebutton(event)" class="X">X</button>
+                            <%}%> -->
                     </div>
                     <% } %>
             </div>
-            <% if(user.name == 'admin'){%>
-            <div class="indi" id="del">
-                <div>
-                    <form action="/email/delete" method="POST">
-                        <label>Email Id</label>
-                        <input name="emailid" type="text" id="emailfield" />
-                        <button type="submit" id = "dltbtn">Delete</button>
+            <% if(user.name=='admin' ){%>
+                <div class="indi" id="del">
+                    <div>
+                        <form action="/email/delete" method="POST">
+                            <label>Email Id</label>
+                            <input name="emailid" type="text" id="emailfield" />
+                            <br>
+                            <select name="category" id = "catdel">
+                                <option name="Admin">Admin</option>
+                                <option name="Faculty">Faculty</option>
+                                <option name="HMC">HMC</option>
+                            </select>
+                            <br>
+                            <div id ="bu"></div>
+                            <button type="submit" id="dltbtn">Delete</button>
+                        </form>
+                    </div>
+                </div>
+                <%}%>
+        </div>
+        <% if(user.name=='admin' ){%>
+            <div id="box">
+                <div id="inner">
+                    <form method="POST" action="/email">
+                        <div class="perso">
+                            <label>emailid</label>
+                        </div>
+                        <input type="text" name="emailid" placeholder="example@daiict.ac.in" required/>
+                        <br>
+                        <div class="perso">
+                            <label>authorityname</label>
+                        </div>
+                        <input type="text" name="authorityname" required/>
+                        <br>
+                        <div id="catdiv">
+                            <select id="category" name="category">
+                                <option name="admin">Admin</option>
+                                <option name="faculty">faculty</option>
+                                <option name="hmc">HMC</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="perso">
+                            <button type="submit">Generate</button>
+                        </div>
                     </form>
                 </div>
             </div>
             <%}%>
-        </div>
-        <% if(user.name == 'admin'){%>
-        <div id="box">
-
-            <div id="inner">
-                <form method="POST" action="/email">
-                    <div class="perso">
-                        <label>emailid</label>
-                    </div>
-                    <input type="text" name="emailid" placeholder="example@daiict.ac.in" />
-                    <br>
-                    <div class="perso">
-                        <label>authorityname</label>
-                    </div>
-                    <input type="text" name="authorityname" />
-                    <br>
-                    <div class="perso">
-                        <button type="submit">Generate</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <%}%>
-        <div></div>
-        <div></div>
-        <div></div>
+                <div id="getform">
+                    Category
+                    <form method="GET" action="/email/choose">
+                        <div id="catgetdiv">
+                            <select id="categoryget" name="category" required>
+                                <option name="admin">Admin</option>
+                                <option name="faculty">faculty</option>
+                                <option name="hmc">HMC</option>
+                            </select>
+                        </div>
+                        <br>
+                        <button type="submit"> get</button>
+                    </form>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
     </div>
     <script src="/static/showall.js">
     </script>
-    
+
 </body>
 
 </html>
