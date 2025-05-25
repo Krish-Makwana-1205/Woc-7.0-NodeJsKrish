@@ -1,4 +1,3 @@
-
 const email = require('../model/email');
 
 async function putEmail(req, res) {
