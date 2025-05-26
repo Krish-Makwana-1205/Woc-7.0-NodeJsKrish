@@ -11,7 +11,6 @@ const cookieParser = require("cookie-parser");
 const sock = require('socket.io');
 const http = require('http');
 const send = require('./routes/send.js');
-const fs = require('fs');
 const multer = require('multer');
 const { restrictToLoggedinUserOnly } = require('./middleware/logincheck.js');
 const {put_files} = require('./controller/resource.js');
