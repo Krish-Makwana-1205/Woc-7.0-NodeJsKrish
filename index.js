@@ -33,7 +33,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.json());
 
-connectmongodB('mongodb://localhost:27017/woc').then(()=>{
+connectmongodB('mongodb+srv://Krish:918273@my-first-cluster.zfc6ret.mongodb.net/').then(()=>{
     console.log('DB up');
 });
 
