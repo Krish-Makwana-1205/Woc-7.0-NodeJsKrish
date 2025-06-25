@@ -41,8 +41,8 @@ app.set('view engine', 'ejs');
 app.use('/static', express.static(path.join(__dirname, 'view')));
 
 //Routes
-app.use("/", restrictToLoggedinUserOnly);
-app.use("/email", email);
+//app.use("/", restrictToLoggedinUserOnly);
+app.use("/", email);
 app.use("/home", home);
 app.use("/user",user);
 app.use("/askQuestion", askquestion);
