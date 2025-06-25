@@ -1,3 +1,7 @@
-# Woc-Node by Krish
+# DA-adapt by Krish
 
-### Kindly find the individual project read me in their project directory
+## Hello this project is my work with various node js libraries like
+-JWT web tokens
+-Node-cron
+-cookie-parser
+-socket-io
